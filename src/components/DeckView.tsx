@@ -12,8 +12,8 @@ const DeckView: React.FC<Props> = (props) => {
   }
   return (
     <React.Fragment>
-      <Deck {...props} cards={cards} />
       <AddCard onSubmit={handleSubmit} />
+      <Deck {...props} cards={cards} />
     </React.Fragment>
   )
 }

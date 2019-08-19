@@ -6,11 +6,15 @@ interface Props extends DeckType { }
 
 const Deck: React.FC<Props> = (props) => {
   return (
-    <React.Fragment>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }}>
       <h3>{props.name}</h3>
       {props.cards.map(card => <Card key={card.id} {...card} />)}
-    </React.Fragment>
+    </div>
   )
 }
 
-export default Deck
+export default React.memo(Deck)
